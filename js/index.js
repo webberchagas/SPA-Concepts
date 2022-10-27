@@ -15,6 +15,7 @@ const linkLogo = document.querySelector('#logo')
 const linkHome = document.querySelector('#home')
 const linkUniverse = document.querySelector('#universe')
 const linkExploration = document.querySelector('#exploration')
+const page = document.querySelector('#page')
 
 linkLogo.addEventListener('click', changeHomePage)
 linkHome.addEventListener('click', changeHomePage)
@@ -22,28 +23,35 @@ linkUniverse.addEventListener('click', changeUniversePage)
 linkExploration.addEventListener('click', changeExplorationPage)
 
 function changeHomePage(event){
+  event.preventDefault()
+  
   linkHome.classList.add('select')
   linkExploration.classList.remove('select')
   linkUniverse.classList.remove('select')
+  page.style.backgroundImage = 'url(../assets/mountains-universe-1.png)'
+
   
-  event.preventDefault()
   router.route(event)
 }
 
 function changeUniversePage(event){
+  event.preventDefault()
+  
   linkHome.classList.remove('select')
   linkExploration.classList.remove('select')
   linkUniverse.classList.add('select')
-  
-  event.preventDefault()
+  page.style.backgroundImage = 'url(../assets/mountains-universe-2.png)'
+
   router.route(event)
 }
 
 function changeExplorationPage(event){
+  event.preventDefault()
+
   linkHome.classList.remove('select')
   linkExploration.classList.add('select')
   linkUniverse.classList.remove('select')
-  
-  event.preventDefault()
+  page.style.backgroundImage = 'url(../assets/mountains-universe-3.png)'
+
   router.route(event)
 }
