@@ -25,13 +25,12 @@ a {
   text-decoration: none;
 }
 
-a:hover, .select{
+a:hover, .active{
   color: #FFFFFF;
   font-weight: 700;
-  font-size: 2.4rem;
 }
 
-#page {
+.page {
   background-image: url(./assets/mountains-universe-1.png);
   background-size: cover;
   
